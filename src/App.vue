@@ -1,26 +1,74 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <the-header></the-header>
+    <play-field></play-field>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "./components/layout/TheHeader.vue";
+import PlayField from "./components/layout/PlayField.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TheHeader,
+    PlayField,
+  },
+};
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  --main-text-color: #e8e8e8;
+  --main-text-color-alt: #000000;
+  --bkg-light-color: #6a3941;
+  --bkg-dark-color: #3e282a;
+  --btn-light-color: #db7032;
+  --btn-dark-color: #a85729;
+  --prizepanel-bkg-color: #d8ae61;
+  --piece-bkg-color: #ffdb99;
+  --piece-bkg-active-color: #b3b67c;
+  --header-text-color: #fff099;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: var(--main-text-color);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--bkg-light-color),
+    var(--bkg-dark-color)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
