@@ -47,6 +47,7 @@ html {
   --prizepanel-bkg-color: #d8ae61;
   --piece-bkg-color: #ffdb99;
   --piece-bkg-active-color: #b3b67c;
+  --piece-bkg-passed-color: #aaaaaa;
   --header-text-color: #fff099;
 }
 

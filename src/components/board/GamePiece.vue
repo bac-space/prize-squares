@@ -1,5 +1,11 @@
 <template>
-  <div class="gamepiece" :class="[isSelected ? 'gamepiece--selected' : '']">
+  <div
+    class="gamepiece"
+    :class="{
+      'gamepiece--selected': isSelected,
+      'gamepiece--passed': isPassed,
+    }"
+  >
     <div class="northeast">
       <span class="eyeball" @click="revelPrize">
         <font-awesome-icon :icon="['fas', 'eye-slash']" v-if="!isSelected" />
@@ -31,13 +37,24 @@ export default {
   props: ["squareId", "prize"],
   setup() {
     const isSelected = ref(false);
+    const isPassed = ref(false);
     const isPrizeHidden = ref(true);
 
     function selectSquare() {
-      if (isSelected.value === true) {
-        isPrizeHidden.value = true;
+      if (isSelected.value === false && isPassed.value === false) {
+        isSelected.value = true;
+        return;
       }
-      isSelected.value = !isSelected.value;
+
+      if (isSelected.value === true && isPassed.value === false) {
+        isPassed.value = true;
+        return;
+      }
+
+      isSelected.value = false;
+      isPassed.value = false;
+      isPrizeHidden.value = true;
+      return;
     }
 
     function revelPrize() {
@@ -50,6 +67,7 @@ export default {
       selectSquare,
       revelPrize,
       isSelected,
+      isPassed,
       isPrizeHidden,
     };
   },
@@ -62,7 +80,7 @@ export default {
   color: var(--main-text-color-alt);
   border-radius: 0.5rem;
   display: grid;
-  grid-template-rows: repeat(2 1fr);
+  grid-template-rows: 5rem 6rem;
   grid-template-columns: 3fr 1fr 1fr;
   grid-template-areas:
     "nw no ne"
@@ -71,6 +89,10 @@ export default {
 
 .gamepiece--selected {
   background-color: var(--piece-bkg-active-color);
+}
+
+.gamepiece--passed {
+  background-color: var(--piece-bkg-passed-color);
 }
 
 .northeast {
@@ -110,6 +132,7 @@ export default {
 
 .northwest h3 {
   font-size: 2rem;
+  line-height: 2.2rem;
 }
 
 .south {
