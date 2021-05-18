@@ -1,6 +1,18 @@
 # Prize Squares
 
-Inspired by TV games shows. The host asks the contestant to pick a square. But before the host reveals the prize the host could ask the contestant if they are sure they want the picked square.
+Inspired by TV games shows. Prize Square allows a host to ask a contestant to pick a square then the host will reveal the contestant's prize.
+
+The squares have three states.
+
+- Normal
+- Selected
+- Passed
+
+Select the square by clicking on the present icon. Clicking on the present icon will cycle through the three states.
+
+To reveal the prize, the square must be in the Selected or Passed state then click on the eye icon. To hide the prize, click on the eye icon again.
+
+Demo: [https://prize-squares-show.netlify.app](https://prize-squares-show.netlify.app)
 
 ## Project setup
 
