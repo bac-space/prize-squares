@@ -8,11 +8,9 @@
           class="prize__description--special"
           name="special5"
           id="pr5"
-          cols="30"
-          rows="4"
+          placeholder="Special Prize #5"
         >
-          Special Prize #5</textarea
-        >
+        </textarea>
       </div>
       <div class="prize__item--special">
         <h3 class="prize__header--special">Special Prize #4</h3>
@@ -20,11 +18,9 @@
           class="prize__description--special"
           name="special4"
           id="pr4"
-          cols="30"
-          rows="4"
+          placeholder="Special Prize #4"
         >
-          Special Prize #4</textarea
-        >
+        </textarea>
       </div>
       <div class="prize__item--special">
         <h3 class="prize__header--special">Special Prize #3</h3>
@@ -32,11 +28,9 @@
           class="prize__description--special"
           name="special3"
           id="pr3"
-          cols="30"
-          rows="4"
+          placeholder="Special Prize #3"
         >
-          Special Prize #3</textarea
-        >
+        </textarea>
       </div>
       <div class="prize__item--special">
         <h3 class="prize__header--special">Special Prize #2</h3>
@@ -44,11 +38,9 @@
           class="prize__description--special"
           name="special2"
           id="pr2"
-          cols="30"
-          rows="4"
+          placeholder="Special Prize #2"
         >
-          Special Prize #2</textarea
-        >
+        </textarea>
       </div>
       <h2>Standard Prizes</h2>
       <div class="prize__item--standard">
@@ -109,7 +101,7 @@ h3 {
 
 .prize__panel {
   flex: 1 1 auto;
-  background-color: var(--prizepanel-bkg-color);
+  background-color: var(--prizepanel-bkg-dk-color);
   color: var(--main-text-color-alt);
   display: flex;
   flex-direction: column;
@@ -128,8 +120,23 @@ h3 {
   padding-bottom: 0.7rem;
 }
 
-.prize__discription--special {
+.prize__description--special {
   resize: none;
+  outline: none;
+  border: none;
+  background-color: var(--prizepanel-bkg-dk-color);
+  width: 95%;
+  height: 5rem;
+}
+
+.prize__description--special:focus {
+  background-color: var(--prizepanel-bkg-lt-color);
+  outline: 3px solid var(--prizepanel-bkg-lt-color);
+}
+
+.prize__description--special:hover {
+  background-color: var(--prizepanel-bkg-lt-color);
+  outline: 3px solid var(--prizepanel-bkg-lt-color);
 }
 
 .prize__header--standard {

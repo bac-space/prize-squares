@@ -40,11 +40,13 @@ html {
 :root {
   --main-text-color: #e8e8e8;
   --main-text-color-alt: #000000;
+  --bkg-white-color: #ffffff;
   --bkg-light-color: #6a3941;
   --bkg-dark-color: #3e282a;
   --btn-light-color: #db7032;
   --btn-dark-color: #a85729;
-  --prizepanel-bkg-color: #d8ae61;
+  --prizepanel-bkg-dk-color: #d8ae61;
+  --prizepanel-bkg-lt-color: #e8cb92;
   --piece-bkg-color: #ffdb99;
   --piece-bkg-active-color: #b3b67c;
   --piece-bkg-passed-color: #aaaaaa;
