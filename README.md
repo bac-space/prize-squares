@@ -14,6 +14,8 @@ To reveal the prize, the square must be in the Selected or Passed state then cli
 
 Demo: [https://prize-squares-show.netlify.app](https://prize-squares-show.netlify.app)
 
+Clicking on the present icon selects the square.  When the square is selected, clicking on the eye icon will reveal the prize.
+
 ## Project setup
 
 ```
