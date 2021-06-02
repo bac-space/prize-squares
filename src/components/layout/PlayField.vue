@@ -21,16 +21,18 @@ export default {
     const prizes = ref([]);
 
     const initPrizes = () => {
-      const prize50 = new Array(12).fill("$50");
+      const prize50 = new Array(9).fill("$50");
       const prize100 = new Array(4).fill("$100");
       const prize50plus = new Array(3).fill("$50 + Pick");
       const prize100plus = new Array(2).fill("$100 + Pick");
+      const prizehighlevel = ["$400", "$300", "200"];
       const prizespecial = ["#2", "#3", "#4", "#5"];
       prizes.value = [
         ...prize50,
         ...prize100,
         ...prize50plus,
         ...prize100plus,
+        ...prizehighlevel,
         ...prizespecial,
       ];
     };

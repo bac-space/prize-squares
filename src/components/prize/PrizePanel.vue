@@ -44,24 +44,32 @@
       </div>
       <h2>Standard Prizes</h2>
       <div class="prize__item--standard">
-        <h3 class="prize__header--standard">$100 plus Free Pick</h3>
-        <p class="prize__description--standard">
-          Quantity Two
-        </p>
+        <p class="prize__amount--standard"><span>$400</span></p>
+        <p class="prize__quantity--standard"><span>1</span></p>
       </div>
       <div class="prize__item--standard">
-        <h3 class="prize__header--standard">$50 plus Free Pick</h3>
-        <p class="prize__description--standard">
-          Quantity Three
-        </p>
+        <p class="prize__amount--standard"><span>$300</span></p>
+        <p class="prize__quantity--standard"><span>1</span></p>
       </div>
       <div class="prize__item--standard">
-        <h3 class="prize__header--standard">$100</h3>
-        <p class="prize__description--standard">Quantity Four</p>
+        <p class="prize__amount--standard"><span>$200</span></p>
+        <p class="prize__quantity--standard"><span>1</span></p>
       </div>
       <div class="prize__item--standard">
-        <h3 class="prize__header--standard">$50</h3>
-        <p class="prize__description--standard">Quantity Twelve</p>
+        <p class="prize__amount--standard"><span>$100 plus Free Pick</span></p>
+        <p class="prize__quantity--standard"><span>2</span></p>
+      </div>
+      <div class="prize__item--standard">
+        <p class="prize__amount--standard"><span>$100</span></p>
+        <p class="prize__quantity--standard"><span>4</span></p>
+      </div>
+      <div class="prize__item--standard">
+        <p class="prize__amount--standard"><span>$50 plus Free Pick</span></p>
+        <p class="prize__quantity--standard"><span>3</span></p>
+      </div>
+      <div class="prize__item--standard">
+        <p class="prize__amount--standard"><span>$50</span></p>
+        <p class="prize__quantity--standard"><span>9</span></p>
       </div>
     </div>
     <div class="control__area">
@@ -139,14 +147,32 @@ h3 {
   outline: 3px solid var(--prizepanel-bkg-lt-color);
 }
 
-.prize__header--standard {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+.prize__item--standard {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.prize__description--standard {
-  padding-left: 1.2rem;
-  font-size: 1.2rem;
+.prize__item--standard span {
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.prize__amount--standard {
+  flex: 2 2 0;
+}
+
+.prize__quantity--standard {
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.prize__quantity--standard span {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--prizepanel-bkg-lt-color);
 }
 
 .control__area {
